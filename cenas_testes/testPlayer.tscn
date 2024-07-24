@@ -1,0 +1,161 @@
+[gd_scene load_steps=4 format=3 uid="uid://bitoxwonrqc4e"]
+
+[ext_resource type="Texture2D" uid="uid://dxr2oedp05t5i" path="res://addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="1_14ilf"]
+[ext_resource type="PackedScene" uid="uid://ymy0tnq7w6eb" path="res://Player/player.tscn" id="2_s2vkf"]
+[ext_resource type="PackedScene" uid="uid://dtpujh1jpow3x" path="res://Enemies/Pawn.tscn" id="3_pcsxp"]
+
+[node name="TestPlayer" type="Node2D"]
+
+[node name="WarriorRed" type="Sprite2D" parent="."]
+position = Vector2(-806, 890)
+texture = ExtResource("1_14ilf")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -1472.0
+offset_top = 192.0
+offset_right = -1409.0
+offset_bottom = 215.0
+scale = Vector2(2.88868, 2.75162)
+text = "Idle"
+
+[node name="Label9" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -1288.0
+offset_top = 94.0
+offset_right = -1225.0
+offset_bottom = 117.0
+scale = Vector2(2.88868, 2.75162)
+text = "0"
+
+[node name="Label10" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -1106.0
+offset_top = 94.0
+offset_right = -1043.0
+offset_bottom = 117.0
+scale = Vector2(2.88868, 2.75162)
+text = "1"
+
+[node name="Label11" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -907.0
+offset_top = 107.0
+offset_right = -844.0
+offset_bottom = 130.0
+scale = Vector2(2.88868, 2.75162)
+text = "2"
+
+[node name="Label15" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -197.0
+offset_top = 148.0
+offset_right = -180.0
+offset_bottom = 364.0
+scale = Vector2(6.96342, 6.85655)
+text = "0		1	2	3	4	5	6	7"
+autowrap_mode = 1
+
+[node name="Label12" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -725.0
+offset_top = 94.0
+offset_right = -662.0
+offset_bottom = 117.0
+scale = Vector2(2.88868, 2.75162)
+text = "3"
+
+[node name="Label13" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -541.0
+offset_top = 94.0
+offset_right = -515.0
+offset_bottom = 117.0
+scale = Vector2(2.88868, 2.75162)
+text = "4"
+
+[node name="Label14" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -334.0
+offset_top = 104.0
+offset_right = -305.0
+offset_bottom = 127.0
+scale = Vector2(2.88868, 2.75162)
+text = "5"
+
+[node name="Label2" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -1469.0
+offset_top = 356.0
+offset_right = -1406.0
+offset_bottom = 379.0
+scale = Vector2(2.88868, 2.75162)
+text = "Walk
+"
+
+[node name="Label3" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -1515.0
+offset_top = 556.0
+offset_right = -1447.0
+offset_bottom = 579.0
+scale = Vector2(2.88868, 2.75162)
+text = "AttackS1
+"
+
+[node name="Label4" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -1561.0
+offset_top = 791.0
+offset_right = -1493.0
+offset_bottom = 814.0
+scale = Vector2(2.88868, 2.75162)
+text = "AttackS2
+"
+
+[node name="Label5" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -1554.0
+offset_top = 994.0
+offset_right = -1486.0
+offset_bottom = 1017.0
+scale = Vector2(2.88868, 2.75162)
+text = "AttackD1
+"
+
+[node name="Label6" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -1562.0
+offset_top = 1158.0
+offset_right = -1491.0
+offset_bottom = 1181.0
+scale = Vector2(2.88868, 2.75162)
+text = "AttackD2
+"
+
+[node name="Label7" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -1583.0
+offset_top = 1344.0
+offset_right = -1512.0
+offset_bottom = 1367.0
+scale = Vector2(2.88868, 2.75162)
+text = "AttackU1
+"
+
+[node name="Label8" type="Label" parent="."]
+custom_minimum_size = Vector2(0.615, 0)
+offset_left = -1558.0
+offset_top = 1522.0
+offset_right = -1487.0
+offset_bottom = 1545.0
+scale = Vector2(2.88868, 2.75162)
+text = "AttackU2
+"
+
+[node name="Player" parent="." instance=ExtResource("2_s2vkf")]
+position = Vector2(564, 393)
+motion_mode = 1
+
+[node name="Pawn" parent="." instance=ExtResource("3_pcsxp")]
+position = Vector2(802, 344)

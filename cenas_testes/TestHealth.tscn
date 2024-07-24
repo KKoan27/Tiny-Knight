@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://drl38n5mqfcrv"]
+
+[ext_resource type="PackedScene" uid="uid://ymy0tnq7w6eb" path="res://Player/player.tscn" id="1_6ypud"]
+[ext_resource type="PackedScene" uid="uid://dtpujh1jpow3x" path="res://Enemies/Pawn.tscn" id="2_ba16w"]
+
+[node name="TestHealth" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_6ypud")]
+position = Vector2(563, 291)
+
+[node name="Pawn2" parent="." instance=ExtResource("2_ba16w")]
+position = Vector2(-185, 87)
+
+[node name="Pawn3" parent="." instance=ExtResource("2_ba16w")]
+position = Vector2(279, -102)
