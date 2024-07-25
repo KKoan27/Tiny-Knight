@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxfyrs1yh4jeh"]
+
+[ext_resource type="PackedScene" uid="uid://dtpujh1jpow3x" path="res://Enemies/Pawn.tscn" id="1_153an"]
+[ext_resource type="PackedScene" uid="uid://ymy0tnq7w6eb" path="res://cenas_testes/Player/player.tscn" id="2_epmbh"]
+
+[sub_resource type="TileSet" id="TileSet_0xani"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_0xani")
+format = 2
+
+[node name="Pawn" parent="." instance=ExtResource("1_153an")]
+position = Vector2(261, -5)
+
+[node name="Pawn2" parent="." instance=ExtResource("1_153an")]
+position = Vector2(30, 337)
+
+[node name="Player" parent="." instance=ExtResource("2_epmbh")]
+position = Vector2(630, 361)

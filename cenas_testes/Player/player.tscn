@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://ymy0tnq7w6eb"]
 
 [ext_resource type="Texture2D" uid="uid://dxr2oedp05t5i" path="res://addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="1_gpd0k"]
-[ext_resource type="Script" path="res://Player/Player.gd" id="1_n2v33"]
+[ext_resource type="Script" path="res://cenas_testes/Player/Player.gd" id="1_n2v33"]
 
 [sub_resource type="Animation" id="Animation_cpdgi"]
 resource_name = "AtackS"
