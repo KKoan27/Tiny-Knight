@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwnr23qpgds25"]
+
+[ext_resource type="PackedScene" uid="uid://ymy0tnq7w6eb" path="res://Player/player.tscn" id="1_8gcpt"]
+[ext_resource type="PackedScene" uid="uid://bmilpg855ead6" path="res://Sistema/mob_spawner.tscn" id="2_23h8c"]
+[ext_resource type="PackedScene" uid="uid://2i5gcwmpjwah" path="res://Misc/Picanha.tscn" id="3_shnpd"]
+
+[node name="Spawner" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_8gcpt")]
+position = Vector2(609, 357)
+
+[node name="MobSpawner" parent="." instance=ExtResource("2_23h8c")]
+
+[node name="Picanha" parent="." instance=ExtResource("3_shnpd")]
+position = Vector2(454, 520)
+
+[node name="Picanha2" parent="." instance=ExtResource("3_shnpd")]
+position = Vector2(62, 44)
+
+[node name="Picanha3" parent="." instance=ExtResource("3_shnpd")]
+position = Vector2(968, 46)

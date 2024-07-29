@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://bg3v5ecryca43"]
+
+[ext_resource type="Script" path="res://UI/gameUI.gd" id="1_aq0ll"]
+[ext_resource type="Texture2D" uid="uid://cts1eqq5p5ii8" path="res://addons/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="1_m8jw3"]
+[ext_resource type="Texture2D" uid="uid://d2po1u2cxsf0o" path="res://addons/Tiny Swords (Update 010)/Resources/Resources/M_Idle_(NoShadow).png" id="3_cd2mm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rp4wt"]
+texture = ExtResource("1_m8jw3")
+texture_margin_left = 33.0579
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="SystemFont" id="SystemFont_qhgpn"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="LabelSettings" id="LabelSettings_pcadw"]
+font = SubResource("SystemFont_qhgpn")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_der8c"]
+atlas = ExtResource("3_cd2mm")
+region = Rect2(40, 48, 56, 56)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kt3yb"]
+font_size = 24
+
+[node name="CanvasLayer" type="CanvasLayer"]
+scale = Vector2(1.06, 1.06)
+transform = Transform2D(1.06, 0, 0, 1.06, 0, 0)
+script = ExtResource("1_aq0ll")
+
+[node name="Panel5" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -312.0
+offset_top = 10.0
+offset_right = -110.0
+offset_bottom = 98.0
+grow_horizontal = 0
+scale = Vector2(0.715351, 0.725385)
+theme_override_styles/panel = SubResource("StyleBoxTexture_rp4wt")
+
+[node name="MeatL" type="Label" parent="Panel5"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 122.647
+offset_top = 7.80328
+offset_right = 160.647
+offset_bottom = 41.8033
+scale = Vector2(1.39183, 1.25275)
+text = "00
+"
+label_settings = SubResource("LabelSettings_pcadw")
+
+[node name="TextureRect" type="TextureRect" parent="Panel5"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = -3.0
+offset_right = 102.0
+offset_bottom = 65.0
+scale = Vector2(0.92, 0.92)
+texture = SubResource("AtlasTexture_der8c")
+metadata/_edit_use_anchors_ = true
+
+[node name="TimerL" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -420.0
+offset_top = 22.0
+offset_right = -371.0
+offset_bottom = 56.0
+grow_horizontal = 0
+text = "8:50"
+label_settings = SubResource("LabelSettings_kt3yb")

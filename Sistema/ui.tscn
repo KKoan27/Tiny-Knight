@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://2jmtty3hih1u"]
+
+[ext_resource type="PackedScene" uid="uid://ymy0tnq7w6eb" path="res://Player/player.tscn" id="1_qqs18"]
+[ext_resource type="PackedScene" uid="uid://bg3v5ecryca43" path="res://UI/gameUI.tscn" id="2_4th2k"]
+[ext_resource type="PackedScene" uid="uid://dtpujh1jpow3x" path="res://Enemies/Pawn.tscn" id="3_bj5wm"]
+[ext_resource type="PackedScene" uid="uid://2i5gcwmpjwah" path="res://Misc/Picanha.tscn" id="4_gm6vq"]
+
+[node name="UI" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_qqs18")]
+position = Vector2(502, 279)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_4th2k")]
+
+[node name="Pawn" parent="." instance=ExtResource("3_bj5wm")]
+position = Vector2(931, 360)
+health = 6
+
+[node name="Pawn2" parent="." instance=ExtResource("3_bj5wm")]
+position = Vector2(745, 519)
+health = 6
+
+[node name="Picanha" parent="." instance=ExtResource("4_gm6vq")]
+position = Vector2(186, 318)
+
+[node name="Picanha2" parent="." instance=ExtResource("4_gm6vq")]
+position = Vector2(465, 493)
+
+[node name="Picanha3" parent="." instance=ExtResource("4_gm6vq")]
+position = Vector2(771, 212)

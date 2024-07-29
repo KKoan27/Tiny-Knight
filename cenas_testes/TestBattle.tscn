@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://drl38n5mqfcrv"]
+
+[ext_resource type="PackedScene" uid="uid://ymy0tnq7w6eb" path="res://Player/player.tscn" id="1_3e0ca"]
+[ext_resource type="PackedScene" uid="uid://dtpujh1jpow3x" path="res://Enemies/Pawn.tscn" id="2_fy48x"]
+[ext_resource type="PackedScene" uid="uid://3buowyg65m4n" path="res://Enemies/Sheep.tscn" id="3_mcvrr"]
+
+[node name="TestBattle" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_3e0ca")]
+position = Vector2(563, 291)
+Sword_damage = 3
+
+[node name="Pawn2" parent="." instance=ExtResource("2_fy48x")]
+position = Vector2(-185, 87)
+
+[node name="Pawn3" parent="." instance=ExtResource("2_fy48x")]
+position = Vector2(279, -102)
+
+[node name="Sheep" parent="." instance=ExtResource("3_mcvrr")]
+position = Vector2(774, -69)
+health = 6
+
+[node name="Sheep2" parent="." instance=ExtResource("3_mcvrr")]
+position = Vector2(1261, -121)
+health = 6

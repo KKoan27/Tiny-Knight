@@ -1,0 +1,229 @@
+[gd_scene load_steps=17 format=3 uid="uid://ymy0tnq7w6eb"]
+
+[ext_resource type="Texture2D" uid="uid://dxr2oedp05t5i" path="res://addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="1_gpd0k"]
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_n2v33"]
+[ext_resource type="PackedScene" uid="uid://ev5lx8odiw88" path="res://Misc/Death.tscn" id="2_i8ytl"]
+[ext_resource type="PackedScene" uid="uid://b43get50vhitk" path="res://Misc/Skill.tscn" id="3_viec6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u03yp"]
+
+[sub_resource type="Animation" id="Animation_weswd"]
+resource_name = "AttackD1"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [24, 25, 26, 27, 28, 29]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.440044),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"deal_damage"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_w5afd"]
+resource_name = "AttackSide"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15, 16, 17]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.439189),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"deal_damage"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_p4r31"]
+resource_name = "AttackU1"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [36, 37, 38, 39, 40, 41]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.43748),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"deal_damage"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_6himx"]
+resource_name = "Idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_b7x72"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_5jctj"]
+resource_name = "Run"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qpnus"]
+_data = {
+"AttackD1": SubResource("Animation_weswd"),
+"AttackSide": SubResource("Animation_w5afd"),
+"AttackU1": SubResource("Animation_p4r31"),
+"Idle": SubResource("Animation_6himx"),
+"RESET": SubResource("Animation_b7x72"),
+"Run": SubResource("Animation_5jctj")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v6gol"]
+radius = 91.0753
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ftijc"]
+radius = 53.2353
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y60x6"]
+bg_color = Color(0.10748, 0.10748, 0.10748, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ge464"]
+bg_color = Color(0.870588, 0.0431373, 0.176471, 1)
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+texture_filter = 1
+position = Vector2(0, 25)
+script = ExtResource("1_n2v33")
+Speed = 5.0
+Sword_damage = 3
+health = 50.0
+deathPF = ExtResource("2_i8ytl")
+SkillDamage = 9
+Skill_interval = 15.0
+Skill_scene = ExtResource("3_viec6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -26)
+texture = ExtResource("1_gpd0k")
+hframes = 6
+vframes = 8
+frame = 29
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1, -3)
+scale = Vector2(0.92, 0.760001)
+shape = SubResource("CircleShape2D_u03yp")
+debug_color = Color(0.596078, 0.921569, 1, 0.105882)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_qpnus")
+}
+autoplay = "Idle"
+
+[node name="AreaEspada" type="Area2D" parent="."]
+scale = Vector2(1.35937, 1.35937)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEspada"]
+position = Vector2(-1, -23)
+scale = Vector2(1.04531, 1.08177)
+shape = SubResource("CircleShape2D_v6gol")
+debug_color = Color(0.501961, 0.490196, 0.819608, 0.0941176)
+
+[node name="HitboxArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea"]
+position = Vector2(0, -25)
+shape = SubResource("CircleShape2D_ftijc")
+debug_color = Color(0.901961, 0.25098, 0.14902, 0.152941)
+
+[node name="Life" type="ProgressBar" parent="."]
+offset_left = -68.0
+offset_top = 29.0
+offset_right = 58.0
+offset_bottom = 42.0
+theme_override_styles/background = SubResource("StyleBoxFlat_y60x6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ge464")
+value = 80.0
+show_percentage = false
