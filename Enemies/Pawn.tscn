@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dtpujh1jpow3x"]
+[gd_scene load_steps=14 format=3 uid="uid://dtpujh1jpow3x"]
 
 [ext_resource type="Texture2D" uid="uid://ci5j3mtuwagys" path="res://addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Pawn/Blue/Pawn_Blue.png" id="1_0sewh"]
+[ext_resource type="Script" path="res://Enemies/Cerebelo/enemy.gd" id="1_1iunq"]
 [ext_resource type="Script" path="res://Enemies/Cerebelo/FollowP.gd" id="1_32k2c"]
-[ext_resource type="Script" path="res://Enemies/enemy.gd" id="1_q37m3"]
-[ext_resource type="PackedScene" uid="uid://ev5lx8odiw88" path="res://cenas_testes/Death.tscn" id="2_0hntm"]
+[ext_resource type="PackedScene" uid="uid://ev5lx8odiw88" path="res://Misc/Death.tscn" id="2_0hntm"]
+[ext_resource type="PackedScene" uid="uid://2i5gcwmpjwah" path="res://Misc/Picanha.tscn" id="3_xv4qf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wb8v2"]
 atlas = ExtResource("1_0sewh")
@@ -57,12 +58,14 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lk8y1"]
 radius = 19.0
-height = 55.6461
+height = 65.3237
 
 [node name="Pawn" type="CharacterBody2D" groups=["Inimigos"]]
 position = Vector2(5, 1)
-script = ExtResource("1_q37m3")
+script = ExtResource("1_1iunq")
 deathPF = ExtResource("2_0hntm")
+drop_chance = 0.01
+drop_items = Array[PackedScene]([ExtResource("3_xv4qf")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 3)
@@ -72,10 +75,13 @@ autoplay = "Run"
 frame_progress = 0.822463
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 18)
+position = Vector2(0, 6)
 scale = Vector2(0.986373, 0.826652)
 shape = SubResource("CapsuleShape2D_lk8y1")
 debug_color = Color(0.596078, 0.921569, 1, 0.105882)
 
 [node name="FollowP" type="Node" parent="."]
 script = ExtResource("1_32k2c")
+
+[node name="DamageDigitMarker" type="Marker2D" parent="."]
+position = Vector2(-5, -26)

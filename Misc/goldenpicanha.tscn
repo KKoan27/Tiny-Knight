@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c781vcfg2poan"]
+
+[ext_resource type="PackedScene" uid="uid://2i5gcwmpjwah" path="res://Misc/Picanha.tscn" id="1_ulk0a"]
+
+[node name="Picanha" instance=ExtResource("1_ulk0a")]
+self_modulate = Color(1, 0.6, 0, 1)

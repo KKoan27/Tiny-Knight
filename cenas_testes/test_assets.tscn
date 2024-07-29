@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=3 uid="uid://d4m8axe4ltgc1"]
+[gd_scene load_steps=153 format=3 uid="uid://d4m8axe4ltgc1"]
 
 [ext_resource type="Texture2D" uid="uid://brmu7xuq8by4u" path="res://addons/Tiny Swords (Update 010)/Deco/01.png" id="1_o1cu8"]
 [ext_resource type="Texture2D" uid="uid://gs28c1yw4tw6" path="res://addons/Tiny Swords (Update 010)/Deco/02.png" id="2_sbkyr"]
@@ -134,6 +134,24 @@
 [ext_resource type="Texture2D" uid="uid://krbv38hb16k7" path="res://addons/Tiny Swords (Update 010)/Factions/Goblins/Troops/TNT/Purple/TNT_Purple.png" id="132_rgcu1"]
 [ext_resource type="Texture2D" uid="uid://i3wg6rxx7m3j" path="res://addons/Tiny Swords (Update 010)/Factions/Goblins/Troops/TNT/Red/TNT_Red.png" id="133_ra8kt"]
 [ext_resource type="Texture2D" uid="uid://cl2ne7krl7myp" path="res://addons/Tiny Swords (Update 010)/Factions/Goblins/Troops/TNT/Yellow/TNT_Yellow.png" id="134_bsbbb"]
+[ext_resource type="Texture2D" uid="uid://cbnpu5cxg3ms4" path="res://addons/PNG (Transparent)/light_02.png" id="135_ixkf4"]
+[ext_resource type="Texture2D" uid="uid://dp2gn21g12278" path="res://addons/PNG (Transparent)/circle_03.png" id="136_pfxbr"]
+[ext_resource type="Texture2D" uid="uid://brk2y4yhblmq" path="res://addons/PNG (Transparent)/magic_02.png" id="137_1haro"]
+[ext_resource type="Texture2D" uid="uid://dldmv0jbc4nup" path="res://addons/Tiny Swords (Update 010)/UI/Pointers/01.png" id="138_vo5iy"]
+[ext_resource type="Texture2D" uid="uid://dy82vgoadtyh1" path="res://addons/Tiny Swords (Update 010)/UI/Pointers/02.png" id="139_tplwd"]
+[ext_resource type="Texture2D" uid="uid://6qi2mtguahms" path="res://addons/Tiny Swords (Update 010)/UI/Pointers/03.png" id="140_oiaqe"]
+[ext_resource type="Texture2D" uid="uid://duk7g04u6bpqu" path="res://addons/Tiny Swords (Update 010)/UI/Pointers/04.png" id="141_bsmn7"]
+[ext_resource type="Texture2D" uid="uid://b71dfu1401l4x" path="res://addons/Tiny Swords (Update 010)/UI/Pointers/05.png" id="142_jsgwv"]
+[ext_resource type="Texture2D" uid="uid://bh7dryneoidh5" path="res://addons/Tiny Swords (Update 010)/UI/Pointers/06.png" id="143_wkrff"]
+[ext_resource type="Texture2D" uid="uid://y2lucm71kesp" path="res://addons/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_3Slides.png" id="144_eobhk"]
+[ext_resource type="Texture2D" uid="uid://237kdieywrfg" path="res://addons/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Down.png" id="145_jmep5"]
+[ext_resource type="Texture2D" uid="uid://b6vpqdktkdph3" path="res://addons/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Down_Pressed.png" id="146_gg2gs"]
+[ext_resource type="Texture2D" uid="uid://crwu14yl14x7n" path="res://addons/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Left.png" id="147_3opua"]
+[ext_resource type="Texture2D" uid="uid://3mpbefs0h3ro" path="res://addons/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Left_Pressed.png" id="148_1jf7i"]
+[ext_resource type="Texture2D" uid="uid://cy2uholdwkv0i" path="res://addons/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Right.png" id="149_5vlsx"]
+[ext_resource type="Texture2D" uid="uid://d3hvevudhxrnd" path="res://addons/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Right_Pressed.png" id="150_iujky"]
+[ext_resource type="Texture2D" uid="uid://ofhs2d4qpm76" path="res://addons/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Up.png" id="151_vs7qy"]
+[ext_resource type="Texture2D" uid="uid://s08ok1uqt0vx" path="res://addons/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_Connection_Up_Pressed.png" id="152_4r6bl"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -473,11 +491,11 @@ position = Vector2(4672, -2067)
 texture = ExtResource("82_36ohh")
 
 [node name="MIdle" type="Sprite2D" parent="."]
-position = Vector2(3347, -2246)
+position = Vector2(3586, -2181)
 texture = ExtResource("83_xuoui")
 
 [node name="MIdle(noShadow)" type="Sprite2D" parent="."]
-position = Vector2(3330, -2312)
+position = Vector2(3451, -2333)
 texture = ExtResource("84_e5fiw")
 
 [node name="MSpawn" type="Sprite2D" parent="."]
@@ -679,3 +697,77 @@ texture = ExtResource("133_ra8kt")
 [node name="TntYellow" type="Sprite2D" parent="."]
 position = Vector2(10486, -2152)
 texture = ExtResource("134_bsbbb")
+
+[node name="SkillM" type="Node2D" parent="."]
+
+[node name="Light02" type="Sprite2D" parent="SkillM"]
+position = Vector2(4688, -3603)
+texture = ExtResource("135_ixkf4")
+
+[node name="Circle03" type="Sprite2D" parent="SkillM"]
+position = Vector2(4699, -3612)
+texture = ExtResource("136_pfxbr")
+
+[node name="Magic02" type="Sprite2D" parent="SkillM"]
+position = Vector2(4695, -3617)
+texture = ExtResource("137_1haro")
+
+[node name="19" type="Sprite2D" parent="."]
+position = Vector2(-8537, -7271)
+texture = ExtResource("138_vo5iy")
+
+[node name="20" type="Sprite2D" parent="."]
+position = Vector2(-8774, -7400)
+texture = ExtResource("139_tplwd")
+
+[node name="21" type="Sprite2D" parent="."]
+position = Vector2(-8527, -7131)
+texture = ExtResource("140_oiaqe")
+
+[node name="22" type="Sprite2D" parent="."]
+position = Vector2(-8781, -7070)
+texture = ExtResource("141_bsmn7")
+
+[node name="23" type="Sprite2D" parent="."]
+position = Vector2(-8791, -7180)
+texture = ExtResource("142_jsgwv")
+
+[node name="24" type="Sprite2D" parent="."]
+position = Vector2(-8786, -7274)
+texture = ExtResource("143_wkrff")
+
+[node name="RibbonBlue3Slides" type="Sprite2D" parent="."]
+position = Vector2(-6064, -7316)
+texture = ExtResource("144_eobhk")
+
+[node name="RibbonBlueConnectionDown" type="Sprite2D" parent="."]
+position = Vector2(-6161, -7202)
+texture = ExtResource("145_jmep5")
+
+[node name="RibbonBlueConnectionDownPressed" type="Sprite2D" parent="."]
+position = Vector2(-6040, -7217)
+texture = ExtResource("146_gg2gs")
+
+[node name="RibbonBlueConnectionLeft" type="Sprite2D" parent="."]
+position = Vector2(-5963, -7215)
+texture = ExtResource("147_3opua")
+
+[node name="RibbonBlueConnectionLeftPressed" type="Sprite2D" parent="."]
+position = Vector2(-5828, -7210)
+texture = ExtResource("148_1jf7i")
+
+[node name="RibbonBlueConnectionRight" type="Sprite2D" parent="."]
+position = Vector2(-6155, -7113)
+texture = ExtResource("149_5vlsx")
+
+[node name="RibbonBlueConnectionRightPressed" type="Sprite2D" parent="."]
+position = Vector2(-6052, -7109)
+texture = ExtResource("150_iujky")
+
+[node name="RibbonBlueConnectionUp" type="Sprite2D" parent="."]
+position = Vector2(-5949, -7138)
+texture = ExtResource("151_vs7qy")
+
+[node name="RibbonBlueConnectionUpPressed" type="Sprite2D" parent="."]
+position = Vector2(-5795, -7108)
+texture = ExtResource("152_4r6bl")

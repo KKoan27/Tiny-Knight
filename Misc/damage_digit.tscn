@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://n8ek7exbsk3w"]
+
+[ext_resource type="Script" path="res://Misc/damage_digit.gd" id="1_hnopp"]
+
+[sub_resource type="SystemFont" id="SystemFont_qh3ps"]
+
+[sub_resource type="SystemFont" id="SystemFont_3knqf"]
+font_names = PackedStringArray("Impact")
+font_weight = 800
+
+[sub_resource type="LabelSettings" id="LabelSettings_760tb"]
+font = SubResource("SystemFont_3knqf")
+font_color = Color(0.86, 0.2322, 0.242663, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_xeec8"]
+resource_name = "Default"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(2.63902, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -40)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1.93187, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.00784314)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_cuv8l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.00784314)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i53sh"]
+_data = {
+"Default": SubResource("Animation_xeec8"),
+"RESET": SubResource("Animation_cuv8l")
+}
+
+[node name="DamageDigit" type="Node2D"]
+script = ExtResource("1_hnopp")
+
+[node name="Node2D" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0.00784314)
+scale = Vector2(1.325, 1.325)
+
+[node name="Label" type="Label" parent="Node2D"]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -11.3208
+offset_top = -24.9057
+offset_right = 16.6792
+offset_bottom = 13.0943
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.50189, 1.33762)
+theme_override_fonts/font = SubResource("SystemFont_qh3ps")
+text = "10
+"
+label_settings = SubResource("LabelSettings_760tb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_i53sh")
+}
+autoplay = "Default"

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://brq7axs600l0d"]
+
+[ext_resource type="PackedScene" uid="uid://2i5gcwmpjwah" path="res://Misc/Picanha.tscn" id="1_3vobq"]
+[ext_resource type="PackedScene" uid="uid://ymy0tnq7w6eb" path="res://Player/player.tscn" id="2_gbsbw"]
+
+[node name="TestSustain" type="Node2D"]
+
+[node name="Picanha" parent="." instance=ExtResource("1_3vobq")]
+position = Vector2(867, 277)
+
+[node name="Player" parent="." instance=ExtResource("2_gbsbw")]
+position = Vector2(241, 321)
+Sword_damage = 5
+health = 1.0
